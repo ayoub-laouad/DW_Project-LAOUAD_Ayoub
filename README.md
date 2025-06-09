@@ -103,7 +103,7 @@ pip install -r requirements.txt
 ### 📊 Visualisation
 
 * Le fichier `LookerStudio-Dashboard.pdf` contient un aperçu du dashboard créé.
-* Le dashboard complet est publié sur **Looker Studio** ([lien à ajouter si disponible](https://lookerstudio.google.com/s/sFsoaFc6kNo)).
+* Le dashboard complet est publié sur **Looker Studio** ([Looker Studio Dashbord](https://lookerstudio.google.com/s/sFsoaFc6kNo)).
 
 ---
 
