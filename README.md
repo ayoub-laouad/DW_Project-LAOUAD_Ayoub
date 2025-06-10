@@ -114,7 +114,7 @@ pip install -r requirements.txt
 * Modèles DBT (staging et star schema)
 * Base de données PostgreSQL avec schémas `public` et `star_schema`
 * Dashboard Looker Studio
-* Documentation PDF du projet (`Projet DW INSEA.pdf`)
+* Documentation PDF du projet (`DW_Project-LAOUAD_Ayoub.pdf`)
 
 ---
 
