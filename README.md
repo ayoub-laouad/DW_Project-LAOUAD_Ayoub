@@ -29,7 +29,7 @@ Ce projet vise à **collecter, nettoyer, transformer, analyser et modéliser** l
 ```
 DW_Project-LAOUAD_Ayoub/
 ├── Banque_General_Dag.py
-├── LookerStudio-Dashboard.pdf
+├── DW_Project-LAOUAD_Ayoub.pdf
 ├── Projet DW INSEA.pdf
 
 ├── Phase1-DataCollection/
