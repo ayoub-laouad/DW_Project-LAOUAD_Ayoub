@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: dim_bank
+    description: "Contient les noms uniques des banques"
+    columns:
+      - name: bank_name
+        description: "Nom de la banque"
+        tests:
+          - not_null
+          - unique
+
+  - name: dim_branch
+    description: "Branches uniques des banques"
+    columns:
+      - name: branch_name
+        description: "Nom de la branche"
+        tests:
+          - not_null
+
+  - name: dim_location
+    description: "Détails de localisation"
+    columns:
+      - name: location
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null
+
+  - name: dim_sentiment
+    description: "Infos de sentiment et topics"
+    columns:
+      - name: sentiment
+        tests:
+          - not_null
+      - name: topic_number
+      - name: topic_words
+      - name: topic_meaning
+
+  - name: fact_reviews
+    description: "Fait contenant les avis bancaires enrichis"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: bank_name
+        tests:
+          - not_null
+      - name: review_date
+        tests:
+          - not_null
+      - name: sentiment
+

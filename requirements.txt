@@ -1,0 +1,39 @@
+# Requirements for DW_Project-LAOUAD_Ayoub
+# Data Collection & Web Scraping
+selenium>=4.0.0
+beautifulsoup4>=4.9.0
+requests>=2.25.0
+
+# Data Manipulation & Analysis
+pandas>=1.3.0
+numpy>=1.21.0
+
+# NLP & Sentiment Analysis
+nltk>=3.6.0
+gensim>=4.0.0
+langdetect>=1.0.9
+scikit-learn>=0.24.0
+transformers>=4.11.0
+torch>=1.9.0
+
+# Database & SQL
+psycopg2-binary>=2.9.0
+sqlalchemy>=1.4.0
+
+# Workflow Orchestration
+apache-airflow>=2.2.0
+apache-airflow-providers-postgres>=2.3.0
+
+# Data Transformation
+# (DBT is usually installed separately in its own environment, but included for completeness)
+dbt-core>=1.0.0
+dbt-postgres>=1.0.0
+
+# Visualization (for local preview)
+matplotlib>=3.4.0
+
+# Misc
+python-dotenv>=0.19.0
+
+# Optional: For Google API (if used)
+google-api-python-client>=2.0.0

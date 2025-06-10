@@ -1,0 +1,44 @@
+// Dimensions
+
+Table dim_bank {
+  bank_id serial [pk]
+  bank_name varchar
+}
+
+Table dim_branch {
+  branch_id serial [pk]
+  branch_name varchar
+  bank_id int [ref: > dim_bank.bank_id]
+}
+
+Table dim_location {
+  location_id serial [pk]
+  location varchar
+  city varchar
+}
+
+Table dim_sentiment {
+  sentiment_id serial [pk]
+  sentiment varchar
+  topic_number int
+  topic_words text
+  topic_meaning varchar
+}
+
+// Table de faits
+
+Table fact_reviews {
+  review_id serial [pk]
+  bank_id int [ref: > dim_bank.bank_id]
+  branch_id int [ref: > dim_branch.branch_id]
+  location_id int [ref: > dim_location.location_id]
+  sentiment_id int [ref: > dim_sentiment.sentiment_id]
+  review_text text
+  cleaned_text text
+  rating int
+  review_date date
+  language varchar
+}
+
+
+Ref: "fact_reviews"."bank_id" < "fact_reviews"."branch_id"

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: src
+    database: bank_reviews
+    schema: public
+    tables:
+      - name: final_reviews

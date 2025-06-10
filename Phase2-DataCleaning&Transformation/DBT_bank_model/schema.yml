@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: my_source
+    description: "Source contenant les avis bancaires bruts"
+    database: avis_banques
+    schema: public
+    tables:
+      - name: reviews
+        description: "Table brute des avis collectés"
+
+models:
+  - name: clean_reviews
+    description: "Modèle nettoyé qui supprime les doublons, normalise le texte et gère les valeurs manquantes."
+    columns:
+      - name: bank_name
+        description: "Nom de la banque converti en majuscules (UPPER)."
+        tests:
+          - not_null
+      - name: branch_name
+        description: "Nom de l'agence converti en minuscules (LOWER), concaténé avec l'adresse si nécessaire."
+        tests:
+          - not_null
+      - name: location
+        description: "Localisation de l'agence en majuscules (UPPER)."
+        tests:
+          - not_null
+      - name: review_text
+        description: "Texte de l'avis en minuscules (LOWER), nettoyé de la ponctuation et des stopwords."
+        tests:
+          - not_null
+      - name: rating
+        description: "Note de l'avis, extraite du texte et convertie en FLOAT."
+      - name: review_date
+        description: "Date de l'avis au format YYYY-MM-DD, transformée depuis une phrase relative."
